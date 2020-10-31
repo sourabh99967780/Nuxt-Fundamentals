@@ -1,4 +1,7 @@
 export default {
+  generate: {
+    routes: ["/posts/balut", "/posts/whereIsIt", "/posts/how"]
+  },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: "nuxt-fundamentals",
