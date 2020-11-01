@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <TheNavbar />
-    <nuxt />
+  <div class="container">
+    <TheNavbar/>
+    <nuxt/>
   </div>
 </template>
 
 <script>
-import TheNavbar from "@/components/TheNavbar";
-export default {
-  components: {
-    TheNavbar
+  import TheNavbar from '@/components/TheNavbar'
+  export default {
+    components: {
+      TheNavbar
+    }
   }
-};
 </script>
 
 <style>
@@ -23,10 +23,12 @@ export default {
   text-decoration: none;
   padding: 10px 30px;
 }
+
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
 }
+
 .button--grey {
   display: inline-block;
   border-radius: 4px;
@@ -36,6 +38,7 @@ export default {
   padding: 10px 30px;
   margin-left: 15px;
 }
+
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;

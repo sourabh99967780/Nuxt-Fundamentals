@@ -1,33 +1,64 @@
-export default {
+const pkg = require('./package')
+
+module.exports = {
+  mode: 'universal',
+
   generate: {
-    routes: ["/posts/balut", "/posts/whereIsIt", "/posts/how"]
+    routes: [
+      '/posts/balut',
+      '/posts/whereIsIt',
+      '/posts/how'
+    ]
   },
-  // Global page headers (https://go.nuxtjs.dev/config-head)
+
+  /*
+  ** Headers of the page
+  */
   head: {
-    title: "nuxt-fundamentals",
+    title: pkg.name,
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ["~/assets/style.css"],
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: { color: '#fff' },
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  /*
+  ** Global CSS
+  */
+  css: [
+    '~/assets/style.css'
+  ],
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+  ],
 
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [],
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+  ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  /*
+  ** Build configuration
+  */
+  build: {
+    /*
+    ** You can extend webpack config here
+    */
+    extend(config, ctx) {
 
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
-};
+    }
+  }
+}
